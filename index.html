@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>WhatsApp Contacto</title>
   <link rel="icon" href="logo.jpeg" type="image/jpeg" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -27,8 +27,7 @@
   <!-- End Meta Pixel Code -->
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
       font-family: 'Poppins', sans-serif;
       background: url('fondo.jpeg') no-repeat center center/cover;
@@ -37,24 +36,22 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      min-height: 100vh;
+      height: 100vh;
+      overflow: hidden;
       position: relative;
       padding: 10px;
     }
-
     header {
-      margin-top: 4vh;
+      margin-top: 2vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
+      gap: 10px;
     }
-
     .whatsapp-logo {
       width: 12vw;
       max-width: 40px;
     }
-
     .logo-circle {
       width: 25vw;
       max-width: 100px;
@@ -65,25 +62,23 @@
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
       animation: pulseG 2.5s ease-in-out infinite;
     }
-
     @keyframes pulseG {
-      0%,100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      0%, 100% {transform: scale(1);}
+      50% {transform: scale(1.05);}
     }
-
     .motivador {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #fff;
-      text-align: center;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.8);
       padding: 10px 20px;
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 10px;
-      max-width: 80%;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #111;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
     .whatsapp-button {
-      margin: 160px auto 30px;
+      margin: 180px auto 30px;
       padding: 12px 20px;
       background-color: #25D366;
       color: white;
@@ -104,18 +99,15 @@
       z-index: 10;
       animation: pulse 1.5s infinite;
     }
-
     @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6); }
-      50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(37,211,102,0.9); }
-      100% { transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6); }
+      0% {transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6);}
+      50% {transform: scale(1.05); box-shadow: 0 0 25px rgba(37,211,102,0.9);}
+      100% {transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6);}
     }
-
     .whatsapp-button img {
       width: 22px;
       height: 22px;
     }
-
     .floating-comment {
       position: fixed;
       top: 10px;
@@ -130,43 +122,48 @@
       animation: fadeLoop 4.5s infinite;
       z-index: 1000;
     }
-
     @keyframes fadeLoop {
-      0%,100% { opacity: 0; }
-      5%,30% { opacity: 1; }
-      35%,100% { opacity: 0; }
+      0%,100% {opacity: 0;}
+      5%,30% {opacity: 1;}
+      35%,100% {opacity: 0;}
     }
-
     .bonus-banner {
       position: fixed;
       bottom: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(8px);
-      color: #ffffff;
+      background: linear-gradient(90deg, rgba(0, 174, 255, 0.85), rgba(0, 200, 150, 0.85));
+      color: white;
       text-align: center;
       padding: 10px;
       font-weight: 600;
       font-size: 0.95rem;
       z-index: 999;
-      animation: fadeBanner 3s infinite ease-in-out;
+      animation: fadeBanner 3s ease-in-out infinite alternate;
     }
-
     @keyframes fadeBanner {
-      0%,100% { opacity: 0.5; }
-      50% { opacity: 1; }
+      0% {opacity: 0.6;}
+      100% {opacity: 1;}
+    }
+    .decorative {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, rgba(37,211,102,0.2), transparent 70%);
+      border-radius: 50%;
+      z-index: 0;
     }
   </style>
 </head>
 <body>
+  <div class="decorative"></div>
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
     <img src="logo.jpeg" alt="Logo" class="logo-circle">
-    <p style="font-size: 14px; color: white; font-weight: 600; margin-top: 5px;">Empresa Oficial Autorizada</p>
   </header>
-
   <div class="motivador">
-    ¡Reclamá tu premio ahora! Tocá el botón y escribinos por WhatsApp 📲
+    💬 ¡Miles ya lo están aprovechando!<br>Conseguí tu premio ahora tocando el botón de WhatsApp 👇
   </div>
 
   <a href="https://wa.me/3517426290?text=¡Hola!%20Quiero%20más%20información%20sobre%20los%20productos" target="_blank" class="whatsapp-button" onclick="fbq('track', 'Contact')">
@@ -175,6 +172,7 @@
   </a>
 
   <div class="bonus-banner">🎁 BONO ACTIVO - ¡Solicítalo ahora por WhatsApp!</div>
+
   <div class="floating-comment" id="notificacion">💬</div>
 
   <script>
