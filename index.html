@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WhatsApp Contacto</title>
   <link rel="icon" href="logo.jpeg" type="image/jpeg" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -20,40 +20,46 @@
     fbq('init', '2254770111623268');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2254770111623268&ev=PageView&noscript=1"
-  /></noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2254770111623268&ev=PageView&noscript=1" />
+  </noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Poppins', sans-serif;
-      background: url('logo.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      background: url('fondo.jpeg') no-repeat center center/cover;
+      color: #111;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
       position: relative;
       padding: 10px;
     }
 
     header {
-      margin-top: 2vh;
+      margin-top: 4vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 5px;
     }
 
-    .whatsapp-logo {width: 12vw; max-width: 40px;}
+    .whatsapp-logo {
+      width: 12vw;
+      max-width: 40px;
+    }
 
     .logo-circle {
-      width: 25vw; max-width: 100px; height: 25vw; max-height: 100px;
+      width: 25vw;
+      max-width: 100px;
+      height: 25vw;
+      max-height: 100px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -61,33 +67,44 @@
     }
 
     @keyframes pulseG {
-      0%, 100% {transform: scale(1);}
-      50% {transform: scale(1.05);}
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     .motivador {
       margin-top: 25px;
-      text-align: center;
-      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0 15px;
       animation: fadeIn 1.5s ease-in-out both;
     }
 
-    .motivador h2 {
+    .motivador-box {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 16px;
+      padding: 18px 22px;
+      text-align: center;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .motivador-box h2 {
       font-size: 1.15rem;
       font-weight: 700;
-      color: #00e676;
+      color: #00ffae;
       margin-bottom: 8px;
     }
 
-    .motivador p {
+    .motivador-box p {
       font-size: 0.95rem;
       font-weight: 500;
-      color: #e0e0e0;
+      color: #ffffff;
       line-height: 1.4;
     }
 
     .whatsapp-button {
-      margin: 180px auto 30px;
+      margin: 160px auto 30px;
       padding: 12px 20px;
       background-color: #25D366;
       color: white;
@@ -110,29 +127,14 @@
     }
 
     @keyframes pulse {
-      0% {transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6);}
-      50% {transform: scale(1.05); box-shadow: 0 0 25px rgba(37,211,102,0.9);}
-      100% {transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6);}
+      0% { transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6); }
+      50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(37,211,102,0.9); }
+      100% { transform: scale(1); box-shadow: 0 0 15px rgba(37,211,102,0.6); }
     }
 
     .whatsapp-button img {
       width: 22px;
       height: 22px;
-    }
-
-    .bonus-banner {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #1c1c1e;
-      color: #00e676;
-      text-align: center;
-      padding: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      z-index: 999;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
-      animation: fadeInUp 1.2s ease-out both;
     }
 
     .floating-comment {
@@ -150,6 +152,32 @@
       z-index: 1000;
     }
 
+    @keyframes fadeLoop {
+      0%,100% { opacity: 0; }
+      5%,30% { opacity: 1; }
+      35%,100% { opacity: 0; }
+    }
+
+    .bonus-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      color: #ffffff;
+      text-align: center;
+      padding: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      z-index: 999;
+      animation: fadeBanner 3s infinite ease-in-out;
+    }
+
+    @keyframes fadeBanner {
+      0%,100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+
     .decorative {
       position: absolute;
       top: -50px;
@@ -161,43 +189,32 @@
       z-index: 0;
     }
 
-    @keyframes fadeLoop {
-      0%,100% {opacity: 0;}
-      5%,30% {opacity: 1;}
-      35%,100% {opacity: 0;}
-    }
-
     @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(10px); }
-      100% { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
   </style>
 </head>
 <body>
   <div class="decorative"></div>
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo" />
-    <img src="logo.jpeg" alt="Logo" class="logo-circle" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
+    <img src="logo.jpeg" alt="Logo" class="logo-circle">
   </header>
 
   <div class="motivador">
-    <h2>🎯 ¡Tu premio está a un mensaje de distancia!</h2>
-    <p>Escribinos ahora por WhatsApp y reclamalo al instante 📲</p>
+    <div class="motivador-box">
+      <h2>🎯 ¡Tu premio está a un mensaje de distancia!</h2>
+      <p>Escribinos ahora por WhatsApp y reclamalo al instante 📲</p>
+    </div>
   </div>
 
   <a href="https://wa.me/3517426290?text=¡Hola!%20Quiero%20más%20información%20sobre%20los%20productos" target="_blank" class="whatsapp-button" onclick="fbq('track', 'Contact')">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     Contactar por WhatsApp
   </a>
 
   <div class="bonus-banner">🎁 BONO ACTIVO - ¡Solicítalo ahora por WhatsApp!</div>
-
   <div class="floating-comment" id="notificacion">💬</div>
 
   <script>
