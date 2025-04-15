@@ -72,35 +72,14 @@
     }
 
     .motivador {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      padding: 0 15px;
-      animation: fadeIn 1.5s ease-in-out both;
-    }
-
-    .motivador-box {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 16px;
-      padding: 18px 22px;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #fff;
       text-align: center;
-      max-width: 400px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .motivador-box h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #00ffae;
-      margin-bottom: 8px;
-    }
-
-    .motivador-box p {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #ffffff;
-      line-height: 1.4;
+      padding: 10px 20px;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 10px;
+      max-width: 80%;
     }
 
     .whatsapp-button {
@@ -177,36 +156,17 @@
       0%,100% { opacity: 0.5; }
       50% { opacity: 1; }
     }
-
-    .decorative {
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 150px;
-      height: 150px;
-      background: radial-gradient(circle, rgba(37,211,102,0.2), transparent 70%);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
-  <div class="decorative"></div>
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-logo">
     <img src="logo.jpeg" alt="Logo" class="logo-circle">
+    <p style="font-size: 14px; color: white; font-weight: 600; margin-top: 5px;">Empresa Oficial Autorizada</p>
   </header>
 
   <div class="motivador">
-    <div class="motivador-box">
-      <h2>🎯 ¡Tu premio está a un mensaje de distancia!</h2>
-      <p>Escribinos ahora por WhatsApp y reclamalo al instante 📲</p>
-    </div>
+    ¡Reclamá tu premio ahora! Tocá el botón y escribinos por WhatsApp 📲
   </div>
 
   <a href="https://wa.me/3517426290?text=¡Hola!%20Quiero%20más%20información%20sobre%20los%20productos" target="_blank" class="whatsapp-button" onclick="fbq('track', 'Contact')">
